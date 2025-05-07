@@ -1,6 +1,6 @@
 ---
 
-name: Linters
+name: Clean Code
 description: "Using ruff to maintain clean code"
 
 on:
