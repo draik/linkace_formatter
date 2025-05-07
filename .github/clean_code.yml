@@ -1,0 +1,22 @@
+---
+
+name: Linters
+description: "Using ruff to maintain clean code"
+
+on:
+  push
+
+jobs:
+  check-python:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+      - name: Setup Python 3
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install Ruff
+        run: pip install ruff
+      - name: Run Ruff
+        run: ruff check .
